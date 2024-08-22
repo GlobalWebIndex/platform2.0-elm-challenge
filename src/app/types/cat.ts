@@ -3,11 +3,11 @@ export type CatData = {
   url: string;
   width: number;
   height: number;
-  breeds: CatBreed[];
+  breeds: CatBreedDetails[];
   favourite: unknown;
 };
 
-export type CatBreed = {
+export type CatBreedDetails = {
   weight: unknown;
   id: string;
   name: string;
