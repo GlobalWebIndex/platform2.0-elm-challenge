@@ -5,6 +5,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Paper,
 } from '@mui/material';
 import { useBreeds } from '../../state/hooks/use-breeds.tsx';
 
@@ -19,11 +20,13 @@ export const BreedList: FC = () => {
     <Box>
       <List>
         {data?.map((item) => (
-          <ListItem key={item.id}>
-            <ListItemButton>
-              <ListItemText>{item.name}</ListItemText>
-            </ListItemButton>
-          </ListItem>
+          <Paper key={item.id} elevation={2} sx={{ marginBottom: '1rem' }}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemText>{item.name}</ListItemText>
+              </ListItemButton>
+            </ListItem>
+          </Paper>
         ))}
       </List>
     </Box>

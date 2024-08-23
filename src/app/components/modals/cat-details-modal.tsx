@@ -45,7 +45,9 @@ export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
   return (
     <Dialog {...rest}>
       <DialogTitle sx={{ m: 0, p: 2 }}>
-        <Link onClick={handleLinkClick}>{firstBreed.name}</Link>
+        <Link onClick={handleLinkClick} sx={{ cursor: 'pointer' }}>
+          {firstBreed.name}
+        </Link>
       </DialogTitle>
       <IconButton
         aria-label="close"
@@ -60,7 +62,12 @@ export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
         <CloseIcon />
       </IconButton>
       <DialogContent dividers>
-        <img src={data.url} alt="" width={300} />
+        <Box
+          component={'img'}
+          src={data.url}
+          alt={firstBreed.name}
+          width={300}
+        />
         <Box
           noValidate
           component="form"
