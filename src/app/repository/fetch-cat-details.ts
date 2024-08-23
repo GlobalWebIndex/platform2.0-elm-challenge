@@ -1,7 +1,11 @@
 import { CatData } from '../types/cat.ts';
+import { AxiosResponse } from 'axios';
+import { axiosClient } from '../http/axios-client/axios-client.ts';
 
 export const fetchCatDetails = async (id: string): Promise<CatData> => {
-  const response = await fetch(`https://api.thecatapi.com/v1/images/${id}`);
+  const { data }: AxiosResponse<CatData> = await axiosClient.get(
+    `/images/${id}`,
+  );
 
-  return response.json();
+  return data;
 };
