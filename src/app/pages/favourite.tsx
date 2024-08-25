@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Container, Typography } from '@mui/material';
+import { FavouriteList } from '../components/favourite-list/favourite-list.tsx';
 
 export const Favourite: FC = () => {
   return (
@@ -9,8 +10,9 @@ export const Favourite: FC = () => {
         variant="h4"
         sx={{ textAlign: 'center', padding: '1rem' }}
       >
-        Favourite Page
+        Favourites Page
       </Typography>
+      <FavouriteList />
     </Container>
   );
 };

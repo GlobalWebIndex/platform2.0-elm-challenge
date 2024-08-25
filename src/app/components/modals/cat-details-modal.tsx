@@ -9,6 +9,8 @@ import {
   FormControlLabel,
   IconButton,
   Link,
+  List,
+  ListItem,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom';
@@ -44,8 +46,12 @@ export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
 
   return (
     <Dialog {...rest}>
-      <DialogTitle sx={{ m: 0, p: 2 }}>
-        <Link onClick={handleLinkClick} sx={{ cursor: 'pointer' }}>
+      <DialogTitle sx={{ m: 0, p: 2, textAlign: 'center' }}>
+        <Link
+          variant="h5"
+          onClick={handleLinkClick}
+          sx={{ cursor: 'pointer', textDecoration: 'none' }}
+        >
           {firstBreed.name}
         </Link>
       </DialogTitle>
@@ -66,8 +72,19 @@ export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
           component={'img'}
           src={data.url}
           alt={firstBreed.name}
+          onClick={handleLinkClick}
           width={300}
+          sx={{
+            display: 'flex',
+            m: 'auto',
+            cursor: 'pointer',
+          }}
         />
+        <List>
+          <ListItem>Origin: {firstBreed.origin}</ListItem>
+          <ListItem>Temperament: {firstBreed.temperament}</ListItem>
+          <ListItem>Description: {firstBreed.description}</ListItem>
+        </List>
         <Box
           noValidate
           component="form"
