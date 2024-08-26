@@ -18,16 +18,26 @@ import { FC } from 'react';
 import { useCatDetails } from '../../state/hooks/use-cat-details.tsx';
 import { ROUTES } from '../../constants/routes.ts';
 import { Favorite, FavoriteBorder } from '@mui/icons-material';
+import { useAddFavourite } from '../../state/hooks/use-add-favourite.ts';
+import { useFavourite } from '../../state/hooks/use-favourite.tsx';
+import { useRemoveFavourite } from '../../state/hooks/use-remove-favourite.ts';
 
 type CatDetailsProps = DialogProps & {
-  id: string;
+  image_id: string;
   onClose: () => void;
 };
 
 export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
-  const { id, ...rest } = props;
+  const { data: favouritesData } = useFavourite();
+  const { addFavourite, isPending: isPendingAddFavourite } = useAddFavourite();
+  const { removeFavourite, isPending: isPendingRemoveFavourite } =
+    useRemoveFavourite();
+  const { image_id, ...rest } = props;
 
-  const { isPending, error, data } = useCatDetails(id);
+  const { isPending, error, data } = useCatDetails(image_id);
+
+  const isInFavourites =
+    favouritesData?.some((favorite) => favorite.image_id === image_id) || false;
 
   const navigate = useNavigate();
 
@@ -42,6 +52,18 @@ export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
   const handleLinkClick = () => {
     rest.onClose();
     navigate(ROUTES.BREED);
+  };
+
+  const toggleFavourite = () => {
+    if (isInFavourites) {
+      const favourite = favouritesData!.find(
+        (item) => item.image_id === image_id,
+      );
+
+      removeFavourite(favourite!.id);
+    } else {
+      addFavourite(image_id);
+    }
   };
 
   return (
@@ -102,9 +124,12 @@ export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
                   icon={<FavoriteBorder />}
                   checkedIcon={<Favorite />}
                   color="secondary"
+                  checked={isInFavourites}
                 />
               }
               label="Add to favourites"
+              onChange={toggleFavourite}
+              disabled={isPendingAddFavourite || isPendingRemoveFavourite}
             />
           </FormControl>
         </Box>

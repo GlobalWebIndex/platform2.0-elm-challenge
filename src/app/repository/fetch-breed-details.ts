@@ -1,4 +1,4 @@
-import { BreedDetailsShort } from '../types/cat.ts';
+import { BreedDetailsShort } from '../types';
 import { AxiosResponse } from 'axios';
 import { axiosClient } from '../http/axios-client/axios-client.ts';
 

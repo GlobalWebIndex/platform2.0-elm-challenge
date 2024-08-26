@@ -1,4 +1,4 @@
-export type CatData = {
+export type Cat = {
   id: string;
   url: string;
   width: number;
@@ -56,4 +56,25 @@ export type BreedDetailsFull = {
   wikipedia_url: string;
   hypoallergenic: number;
   reference_image_id: string;
+};
+
+export type Favourite = {
+  id: number;
+  user_id: string;
+  image_id: string;
+  sub_id: null;
+  created_at: string;
+  image: {
+    id: string;
+    url: string;
+  };
+};
+
+export type AddFavorite = {
+  id: number;
+  message: string;
+};
+
+export type RemoveFavorite = {
+  message: string;
 };

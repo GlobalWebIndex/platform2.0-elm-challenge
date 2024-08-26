@@ -17,7 +17,7 @@ export const CatList: FC = () => {
 
   const openCatModal = (id: string) => {
     const modal = showModal(CatDetailsModal, {
-      id,
+      image_id: id,
       onClose: () => {
         modal.hide();
       },

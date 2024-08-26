@@ -90,6 +90,7 @@ export const Header: FC = () => {
                     textAlign="center"
                     component={Link}
                     to={page.route}
+                    sx={{ textDecoration: 'none' }}
                   >
                     {page.menuItem}
                   </Typography>

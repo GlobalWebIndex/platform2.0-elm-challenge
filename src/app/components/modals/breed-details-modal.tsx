@@ -32,7 +32,7 @@ export const BreedDetailsModal: FC<BreedDetailsProps> = (props) => {
 
   const openCatModal = (id: string) => {
     const modal = showModal(CatDetailsModal, {
-      id,
+      image_id: id,
       onClose: () => {
         modal.hide();
       },
@@ -60,8 +60,8 @@ export const BreedDetailsModal: FC<BreedDetailsProps> = (props) => {
               key={item.id}
               component="button"
               onClick={() => {
+                rest.onClose();
                 openCatModal(item.id);
-                // rest.onClose(); // TODO figure out the sequence here
               }}
             >
               <ImageListItem>
