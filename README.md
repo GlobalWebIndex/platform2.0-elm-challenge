@@ -1,3 +1,29 @@
+## Description
+
+This project is a testing task for the Senior FE Developer position. I used here React, React-Query, MUI and other common technologies. 
+Written on Typescript. Requirements you can find below in the section `GlobalWebIndex Engineering Challenge`
+
+### Installation
+
+```bash
+$ yarn install
+```
+
+### Configs
+
+Please copy `.env.example` to the `.env.local`, then setup there your `VITE_API_KEY`, 
+you can get it here [https://developers.thecatapi.com/](https://developers.thecatapi.com/)
+
+
+### Running the app
+
+```bash
+$ yarn dev
+```
+
+Then you can open site in the browser with link from the terminal, and check the App
+
+
 # GlobalWebIndex Engineering Challenge
 
 ## Exercise: CatLover
