@@ -1,0 +1,16 @@
+@import "@/css/_vars";
+@import "@/css/_mixins";
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+
+  @include mediaScreen(tablet) {
+    text-align: left;
+  }
+}
+
+.section {
+  flex: 1;
+}

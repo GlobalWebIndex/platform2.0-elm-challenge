@@ -1,0 +1,50 @@
+@import "@/css/_vars";
+@import "@/css/_mixins";
+
+.nav {
+  grid-area: nav;
+  display: none;
+
+  ul {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    font-weight: 500;
+    margin: 1.5rem;
+    gap: 20px;
+    align-items: baseline;
+    list-style-type: none;
+
+    @include mediaScreen(mobile) {
+      display: grid;
+    }
+  }
+
+  a {
+    text-align: center;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @include mediaScreen(mobile) {
+    display: grid;
+  }
+}
+
+.isActive {
+  text-decoration: underline;
+}
+
+.homeLink {
+  justify-self: right;
+}
+
+.breedsLink {
+  justify-self: center;
+}
+
+.favouritesLink {
+  justify-self: left;
+}

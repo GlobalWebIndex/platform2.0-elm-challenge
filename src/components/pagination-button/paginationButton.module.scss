@@ -1,0 +1,13 @@
+@import "@/css/_vars";
+
+button.disabled {
+  background-color: grey;
+  border-color: $colorLightGrey;
+  cursor: default;
+  opacity: 0.8;
+
+  &:hover {
+    background-color: grey;
+    border-color: $colorLightGrey;
+  }
+}

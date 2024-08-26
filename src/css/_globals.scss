@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  color: #fff;
+  background: $colorDark;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+button.btn {
+  background-color: $colorLightGreen;
+  border: 2px solid $colorDarkGreen;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(61, 139, 61);
+    border-color: $colorLightGreen;
+  }
+}
+
+button.btn.round {
+  border-radius: 30px;
+}
+
+button.pageButton {
+  display: flex;
+  width: $imagesWidth;
+  height: $imagesHeight;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+
+  div {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    padding: 0 14px;
+    color: #fff;
+
+    &:hover {
+      color: $colorLightGreen;
+      border-color: $colorLightGreen;
+    }
+  }
+}

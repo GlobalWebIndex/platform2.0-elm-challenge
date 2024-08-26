@@ -1,0 +1,56 @@
+@import "@/css/_vars";
+@import "@/css/_mixins";
+
+.sidebar {
+  display: grid;
+  grid-area: nav;
+  align-items: start;
+  justify-content: end;
+
+  span {
+    display: flex;
+    padding: 30px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style-type: none;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgb(54, 58, 61, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(92, 63, 63, 0.103);
+
+    li {
+      width: 100%;
+      padding: 10px;
+
+      &:hover {
+        background-image: linear-gradient(
+          rgba(87, 102, 87, 0.527),
+          $colorLightGrey
+        );
+      }
+    }
+
+    a {
+      text-decoration: none;
+      width: 100%;
+    }
+  }
+
+  @include mediaScreen(mobile) {
+    display: none;
+  }
+}
+
+.isActive {
+  background-color: rgba(87, 102, 87, 0.527);
+}

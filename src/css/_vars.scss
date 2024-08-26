@@ -1,0 +1,25 @@
+//Declaring variable widths and colors that are going to be used throught the app
+
+//Declaring screen sizes. For this specfic app we care for the width breakpoint shown below:
+$screens: (
+  small: 400px,
+  mobile: 620px,
+  tablet: 800px,
+  desktop: 1200px,
+);
+
+$colorGreen: #0d2a1f;
+$colorDarkGreen: #3d8b3d;
+$colorLightGreen: #24ae7c;
+$colorLightGrey: #5c5c5c;
+$colorDark: #0d0f10;
+$colorLightDark: #363a3d;
+$transitionDuration: 0.2s;
+
+$bannerHight: 372px;
+$imagesWidth: 150px;
+$imagesHeight: 150px;
+$imagesMediumWidth: 200px;
+$imagesMediumHeight: 200px;
+$breedsImagesWidth: 100px;
+$breedsImagesHeight: 100px;

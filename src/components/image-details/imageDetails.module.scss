@@ -1,0 +1,73 @@
+@import "@/css/_vars";
+@import "@/css/_mixins";
+
+.imageDetails {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include mediaScreen(small) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.imageSection {
+  justify-self: center;
+
+  @include mediaScreen(small) {
+    justify-self: right;
+  }
+}
+
+.imageContainer {
+  font-weight: 300;
+  font-size: 0.8rem;
+
+  @include mediaScreen(mobile) {
+    font-size: 0.95rem;
+  }
+}
+
+.detailsSection {
+  display: grid;
+  place-items: center;
+
+  @include mediaScreen(small) {
+    place-items: start;
+  }
+}
+
+.detailsTable {
+  td:nth-of-type(odd) {
+    text-align: center;
+    padding-right: 20px;
+
+    @include mediaScreen(small) {
+      text-align: right;
+    }
+  }
+
+  td:nth-of-type(even) {
+    text-align: center;
+
+    @include mediaScreen(small) {
+      text-align: left;
+    }
+  }
+}
+
+.image {
+  object-fit: cover;
+  width: $imagesWidth;
+  height: $imagesHeight;
+  border-radius: 5px;
+
+  @include mediaScreen(mobile) {
+    width: $imagesMediumWidth;
+    height: $imagesMediumHeight;
+  }
+}

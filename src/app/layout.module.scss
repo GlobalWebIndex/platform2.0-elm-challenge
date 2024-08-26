@@ -1,0 +1,39 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 372px 1fr 100px;
+  gap: 30px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+
+  & > main {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    grid-area: main;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 80px;
+  }
+
+  & > header {
+    grid-area: header;
+  }
+
+  & > footer {
+    grid-area: footer;
+    height: 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+}

@@ -1,0 +1,13 @@
+@import "@/css/_vars";
+
+.imageList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($imagesWidth, 1fr));
+  gap: 20px;
+  list-style-type: none;
+  grid-auto-flow: dense;
+
+  li {
+    max-width: $imagesWidth;
+  }
+}

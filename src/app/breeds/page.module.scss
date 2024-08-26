@@ -1,0 +1,20 @@
+@import "@/css/_vars";
+@import "@/css/_mixins";
+
+.breedsContainer {
+  dialog {
+    width: 400px;
+
+    @include mediaScreen(tablet) {
+      width: 600px;
+    }
+
+    @include mediaScreen(desktop) {
+      width: 1000px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}

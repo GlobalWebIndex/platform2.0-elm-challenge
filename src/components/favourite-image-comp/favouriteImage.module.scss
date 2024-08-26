@@ -1,0 +1,53 @@
+@import "@/css/_vars";
+
+.favouriteImageContainer {
+  position: relative;
+}
+
+.favouriteImage {
+  object-fit: cover;
+  width: $imagesWidth;
+  height: $imagesHeight;
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+}
+
+.removeOverlay {
+  display: flex;
+  width: 102%;
+  height: 100%;
+  background-color: $colorLightDark;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  place-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.deletingOverlay {
+  display: flex;
+  width: 102%;
+  height: 100%;
+  background-color: $colorLightDark;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  z-index: 10;
+  opacity: 0.8;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  place-items: center;
+  justify-content: center;
+}

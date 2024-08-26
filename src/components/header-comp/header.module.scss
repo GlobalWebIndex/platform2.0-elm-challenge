@@ -1,0 +1,72 @@
+@import "@/css/_vars";
+@import "@/css/_mixins";
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo nav";
+  width: 100vw;
+  height: $bannerHight;
+
+  @include mediaScreen(small) {
+    grid-template-columns: 1fr 200px;
+  }
+
+  @include mediaScreen(mobile) {
+    grid-template-columns: 1fr 410px;
+  }
+}
+
+.logo {
+  font-size: 2rem;
+  grid-area: logo;
+  margin: 1.5rem;
+}
+
+.hero {
+  width: 100vw;
+  height: 100%;
+  max-height: $bannerHight;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  object-fit: cover;
+}
+
+.heroParagraph {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: center;
+  max-width: 700px;
+  text-align: center;
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 20px 0;
+
+    @include mediaScreen(mobile) {
+      font-size: 1.5rem;
+    }
+
+    @include mediaScreen(tablet) {
+      font-size: 2.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 50%;
+    margin: 0px auto;
+
+    @include mediaScreen(mobile) {
+      font-size: 1.2rem;
+    }
+
+    @include mediaScreen(tablet) {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+//This is a mixin for applying css media queries based on certain width breakpoints,
+//differentiating between mobile view, tablet view and desktop view (see _vasr.scss)
+//Here we follow a mobile-first approach, that's why we use media query for min-width
+@mixin mediaScreen($queryScreen) {
+  @each $screen, $size in $screens {
+    @if $screen==$queryScreen {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}
