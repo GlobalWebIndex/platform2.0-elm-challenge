@@ -23,6 +23,11 @@ $ yarn dev
 
 Then you can open site in the browser with link from the terminal, and check the App
 
+### Notice
+
+Unfortunately, pagination logic does not work as expected due to unstable data provided by API, you will see reloading of all previous items while pressing "Load More" button
+
+__________________
 
 # GlobalWebIndex Engineering Challenge
 

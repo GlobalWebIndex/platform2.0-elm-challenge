@@ -2,9 +2,9 @@ import { Cat } from '../types';
 import { AxiosResponse } from 'axios';
 import { axiosClient } from '../http/axios-client/axios-client.ts';
 
-export const fetchCats = async (): Promise<Cat[]> => {
+export const fetchCats = async (limit: string): Promise<Cat[]> => {
   const getCatsParams = {
-    limit: '10',
+    limit,
     has_breeds: '1',
   };
 
