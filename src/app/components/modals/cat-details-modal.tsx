@@ -21,6 +21,7 @@ import { Favorite, FavoriteBorder } from '@mui/icons-material';
 import { useAddFavourite } from '../../state/hooks/use-add-favourite.ts';
 import { useFavourite } from '../../state/hooks/use-favourite.tsx';
 import { useRemoveFavourite } from '../../state/hooks/use-remove-favourite.ts';
+import { IsPendingModal } from './is-pending-modal.tsx';
 
 type CatDetailsProps = DialogProps & {
   image_id: string;
@@ -41,7 +42,7 @@ export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
 
   const navigate = useNavigate();
 
-  if (isPending) return 'Loading...';
+  if (isPending) return <IsPendingModal />;
 
   if (error) return 'An error has occurred: ' + error.message;
 
@@ -95,11 +96,12 @@ export const CatDetailsModal: FC<CatDetailsProps> = (props) => {
           src={data.url}
           alt={firstBreed.name}
           onClick={handleLinkClick}
-          width={300}
           sx={{
             display: 'flex',
             m: 'auto',
             cursor: 'pointer',
+            maxWidth: '100%',
+            width: 300,
           }}
         />
         <List>

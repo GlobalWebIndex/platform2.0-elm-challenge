@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import {
   Box,
+  CircularProgress,
   List,
   ListItem,
   ListItemButton,
@@ -16,7 +17,8 @@ export const BreedList: FC = () => {
 
   const { isPending, error, data } = useBreeds();
 
-  if (isPending) return 'Loading...';
+  if (isPending)
+    return <CircularProgress sx={{ display: 'flex', margin: '2rem auto' }} />;
 
   if (error) return 'An error has occurred: ' + error.message;
 

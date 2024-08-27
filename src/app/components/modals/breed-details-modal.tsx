@@ -6,12 +6,16 @@ import {
   ImageList,
   ImageListItem,
   Link,
+  Paper,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { FC } from 'react';
 import { useBreedDetails } from '../../state/hooks/use-breed-details.ts';
 import { CatDetailsModal } from './cat-details-modal.tsx';
 import { useModal } from 'mui-modal-provider';
+import { IsPendingModal } from './is-pending-modal.tsx';
 
 type BreedDetailsProps = DialogProps & {
   id: string;
@@ -20,11 +24,14 @@ type BreedDetailsProps = DialogProps & {
 
 export const BreedDetailsModal: FC<BreedDetailsProps> = (props) => {
   const { showModal } = useModal();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.up('sm'));
+
   const { id, ...rest } = props;
 
   const { isPending, error, data } = useBreedDetails(id);
 
-  if (isPending) return 'Loading...';
+  if (isPending) return <IsPendingModal />;
 
   if (error) return 'An error has occurred: ' + error.message;
 
@@ -54,7 +61,12 @@ export const BreedDetailsModal: FC<BreedDetailsProps> = (props) => {
         <CloseIcon />
       </IconButton>
       <DialogContent dividers>
-        <ImageList variant="masonry" cols={3} gap={8}>
+        <ImageList
+          variant="masonry"
+          cols={isSmallScreen ? 3 : 2}
+          gap={8}
+          sx={{ p: 2 }}
+        >
           {data?.map((item) => (
             <Link
               key={item.id}
@@ -64,14 +76,16 @@ export const BreedDetailsModal: FC<BreedDetailsProps> = (props) => {
                 openCatModal(item.id);
               }}
             >
-              <ImageListItem>
-                <img
-                  srcSet={item.url}
-                  src={item.url}
-                  alt={item.id}
-                  loading="lazy"
-                />
-              </ImageListItem>
+              <Paper elevation={3}>
+                <ImageListItem>
+                  <img
+                    srcSet={item.url}
+                    src={item.url}
+                    alt={item.id}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              </Paper>
             </Link>
           ))}
         </ImageList>
