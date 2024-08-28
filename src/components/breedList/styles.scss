@@ -1,0 +1,24 @@
+.breeds {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+
+  .link {
+    padding: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .breeds {
+    gap: 2rem;
+  }
+}
