@@ -1,0 +1,1 @@
+export {CatDetailsPreview} from './catDetailsPreview';
