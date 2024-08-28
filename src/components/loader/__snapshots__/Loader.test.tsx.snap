@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> should render loader 1`] = `
+<div>
+  <div
+    class="loader"
+  >
+    <svg>
+      <use
+        href="function SvgIcons(props) {
+  return React.createElement(
+    'svg', 
+    Object.assign({}, props, {'data-file-name': SvgIcons.name})
+  );
+}#icon-cw"
+      />
+    </svg>
+  </div>
+</div>
+`;
