@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render the index route "cats" 1`] = `
+<div>
+  <div
+    class="navigation"
+  >
+    <h1>
+      Cat lover
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/cats"
+          >
+            Cats
+          </a>
+        </li>
+        <li>
+          <a
+            href="/breeds"
+          >
+            Breeds
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    Cat list
+  </div>
+</div>
+`;
+
+exports[`<App /> when the route is "/breeds" should render the breed list 1`] = `
+<div>
+  <div
+    class="navigation"
+  >
+    <h1>
+      Cat lover
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/cats"
+          >
+            Cats
+          </a>
+        </li>
+        <li>
+          <a
+            href="/breeds"
+          >
+            Breeds
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    Breed list
+  </div>
+</div>
+`;
+
+exports[`<App /> when the route is "/breeds/:id" should render the modal 1`] = `
+<div>
+  <div
+    class="navigation"
+  >
+    <h1>
+      Cat lover
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/cats"
+          >
+            Cats
+          </a>
+        </li>
+        <li>
+          <a
+            href="/breeds"
+          >
+            Breeds
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    Breed list
+    <div>
+      Modal
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<App /> when the route is "/cats" should render the cat list 1`] = `
+<div>
+  <div
+    class="navigation"
+  >
+    <h1>
+      Cat lover
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/cats"
+          >
+            Cats
+          </a>
+        </li>
+        <li>
+          <a
+            href="/breeds"
+          >
+            Breeds
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    Cat list
+  </div>
+</div>
+`;
+
+exports[`<App /> when the route is "/cats/:id" should render the cat details preview 1`] = `
+<div>
+  <div
+    class="navigation"
+  >
+    <h1>
+      Cat lover
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/cats"
+          >
+            Cats
+          </a>
+        </li>
+        <li>
+          <a
+            href="/breeds"
+          >
+            Breeds
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    Cat details preview
+  </div>
+</div>
+`;
+
+exports[`<App /> when the route is "/cats/:id" when a background location exists should render the modal 1`] = `
+<div>
+  <div
+    class="navigation"
+  >
+    <h1>
+      Cat lover
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/cats"
+          >
+            Cats
+          </a>
+        </li>
+        <li>
+          <a
+            href="/breeds"
+          >
+            Breeds
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    Cat list
+  </div>
+  <div>
+    Modal
+  </div>
+</div>
+`;
+
+exports[`<App /> when the route is unknown should redirect to the "/cats" route 1`] = `
+<div>
+  <div
+    class="navigation"
+  >
+    <h1>
+      Cat lover
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/cats"
+          >
+            Cats
+          </a>
+        </li>
+        <li>
+          <a
+            href="/breeds"
+          >
+            Breeds
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    Cat list
+  </div>
+</div>
+`;
