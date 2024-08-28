@@ -1,0 +1,1 @@
+export {BreedDetails} from './breedDetails';
