@@ -1,0 +1,62 @@
+@import '../../assets/stylesheets/classes.scss';
+
+.dialog {
+  $actionsHeight: 50px;
+
+  width: 680px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .container {
+    padding: 1rem;
+    overflow: auto;
+    box-sizing: border-box;
+    height: calc(100% - #{$actionsHeight});
+  }
+
+  .actions {
+    height: $actionsHeight;
+    border-top: 1px solid black;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  button {
+    @extend %baseButton;
+
+    background-color: transparent;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+
+    &:hover {
+      color: #fff;
+      background-color: #6c757d;
+      border-color: #6c757d;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .dialog {
+    .actions {
+      button {
+        width: 20%;
+      }
+    }
+  }
+}

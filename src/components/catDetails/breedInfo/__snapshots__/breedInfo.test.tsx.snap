@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreedInfo /> should render breed information 1`] = `
+<div>
+  <div
+    class="testClass"
+  >
+    <h2>
+      Breeds
+    </h2>
+    <ul>
+      <li>
+        <h3>
+          Breed One
+        </h3>
+        <ul>
+          <li>
+            <strong>
+              Origin:
+            </strong>
+             
+            Country One
+          </li>
+          <li>
+            <strong>
+              Temperament:
+            </strong>
+             
+            Calm
+          </li>
+          <li>
+            <strong>
+              Life span:
+            </strong>
+             
+            10-12
+             years
+          </li>
+          <li>
+            <strong>
+              Wikipedia:
+            </strong>
+             
+            <a
+              href="https://en.wikipedia.org/wiki/Breed_One"
+              rel="noreferrer"
+              target="_blank"
+            >
+              https://en.wikipedia.org/wiki/Breed_One
+            </a>
+          </li>
+          <li>
+            <a
+              href="/breeds/1"
+            >
+              Visit the breed page
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<BreedInfo /> when the cat has multiple breeds should render with multiple breeds 1`] = `
+<div>
+  <div
+    class="testClass"
+  >
+    <h2>
+      Breeds
+    </h2>
+    <ul>
+      <li>
+        <h3>
+          Breed One
+        </h3>
+        <ul>
+          <li>
+            <strong>
+              Origin:
+            </strong>
+             
+            Country One
+          </li>
+          <li>
+            <strong>
+              Temperament:
+            </strong>
+             
+            Calm
+          </li>
+          <li>
+            <strong>
+              Life span:
+            </strong>
+             
+            10-12
+             years
+          </li>
+          <li>
+            <strong>
+              Wikipedia:
+            </strong>
+             
+            <a
+              href="https://en.wikipedia.org/wiki/Breed_One"
+              rel="noreferrer"
+              target="_blank"
+            >
+              https://en.wikipedia.org/wiki/Breed_One
+            </a>
+          </li>
+          <li>
+            <a
+              href="/breeds/1"
+            >
+              Visit the breed page
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>
+          Breed Two
+        </h3>
+        <ul>
+          <li>
+            <strong>
+              Origin:
+            </strong>
+             
+            Country Two
+          </li>
+          <li>
+            <strong>
+              Temperament:
+            </strong>
+             
+            Active
+          </li>
+          <li>
+            <strong>
+              Life span:
+            </strong>
+             
+            12-14
+             years
+          </li>
+          <li>
+            <strong>
+              Wikipedia:
+            </strong>
+             
+            <a
+              href="https://en.wikipedia.org/wiki/Breed_Two"
+              rel="noreferrer"
+              target="_blank"
+            >
+              https://en.wikipedia.org/wiki/Breed_Two
+            </a>
+          </li>
+          <li>
+            <a
+              href="/breeds/2"
+            >
+              Visit the breed page
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

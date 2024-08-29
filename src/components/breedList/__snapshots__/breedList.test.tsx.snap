@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreedList /> when data is fetched should render breeds 1`] = `
+<div>
+  <div
+    class="breeds"
+  >
+    <a
+      class="link"
+      href="/1"
+    >
+      Breed 1
+    </a>
+    <a
+      class="link"
+      href="/2"
+    >
+      Breed 2
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<BreedList /> when data is fetching should render Loader 1`] = `
+<div>
+  <div
+    class="loader"
+  >
+    <svg>
+      <use
+        href="function SvgIcons(props) {
+  return React.createElement(
+    'svg', 
+    Object.assign({}, props, {'data-file-name': SvgIcons.name})
+  );
+}#icon-cw"
+      />
+    </svg>
+  </div>
+</div>
+`;

@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CatDetails /> when the image width is greater than the height should render with the vertical layout 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="vertical"
+    >
+      <div
+        class="image"
+      >
+        <img
+          alt="Cat"
+          src="http://example.com/cat.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CatDetails /> when the image width is greater than the height when breeds are available should render breed information 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="vertical"
+    >
+      <div
+        class="image"
+      >
+        <img
+          alt="Cat"
+          src="http://example.com/cat.jpg"
+        />
+      </div>
+      <div
+        class="breeds"
+      >
+        <h2>
+          Breeds
+        </h2>
+        <ul>
+          <li>
+            <h3>
+              Breed 1
+            </h3>
+            <ul>
+              <li>
+                <strong>
+                  Origin:
+                </strong>
+                 
+                Origin 1
+              </li>
+              <li>
+                <strong>
+                  Temperament:
+                </strong>
+                 
+                Temperament 1
+              </li>
+              <li>
+                <strong>
+                  Life span:
+                </strong>
+                 
+                10-12
+                 years
+              </li>
+              <li>
+                <strong>
+                  Wikipedia:
+                </strong>
+                 
+                <a
+                  href="http://example.com/breed1"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  http://example.com/breed1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/breeds/1"
+                >
+                  Visit the breed page
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CatDetails /> when the image width is less than or equal to its height should render with the horizontal layout 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="horizontal withNoBreeds"
+    >
+      <div
+        class="image"
+      >
+        <img
+          alt="Cat"
+          src="https://example.com/cat.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CatDetails /> when the image width is less than or equal to its height when breeds are available should render breed information 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="horizontal"
+    >
+      <div
+        class="image"
+      >
+        <img
+          alt="Cat"
+          src="http://example.com/cat.jpg"
+        />
+      </div>
+      <div
+        class="breeds"
+      >
+        <h2>
+          Breeds
+        </h2>
+        <ul>
+          <li>
+            <h3>
+              Breed 1
+            </h3>
+            <ul>
+              <li>
+                <strong>
+                  Origin:
+                </strong>
+                 
+                Origin 1
+              </li>
+              <li>
+                <strong>
+                  Temperament:
+                </strong>
+                 
+                Temperament 1
+              </li>
+              <li>
+                <strong>
+                  Life span:
+                </strong>
+                 
+                10-12
+                 years
+              </li>
+              <li>
+                <strong>
+                  Wikipedia:
+                </strong>
+                 
+                <a
+                  href="http://example.com/breed1"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  http://example.com/breed1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/breeds/1"
+                >
+                  Visit the breed page
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

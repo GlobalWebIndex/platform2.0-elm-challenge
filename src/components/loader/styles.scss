@@ -1,0 +1,27 @@
+.loader {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  margin: 5rem auto;
+  text-align: center;
+
+  svg {
+    height: 8rem;
+    width: 8rem;
+    fill: rgba(0, 0, 0, 0.5);
+    transform-origin: 44% 50%;
+    animation: rotate 1.5s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

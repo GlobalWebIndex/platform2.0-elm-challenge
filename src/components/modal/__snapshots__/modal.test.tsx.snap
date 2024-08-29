@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> when data is fetched for breed should render breed details 1`] = `
+<div>
+  <dialog
+    class="dialog"
+    role="dialog"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="images"
+      >
+        <a
+          href="/cats/1"
+        >
+          <img
+            alt="Breed"
+            src="http://example.com/cat.jpg"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      class="actions"
+    >
+      <button>
+        Back
+      </button>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`<Modal /> when data is fetched for cat should render cat details 1`] = `
+<div>
+  <dialog
+    class="dialog"
+    role="dialog"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="horizontal withNoBreeds"
+        >
+          <div
+            class="image"
+          >
+            <img
+              alt="Cat"
+              src="http://example.com/cat.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="actions"
+    >
+      <button>
+        Back
+      </button>
+    </div>
+  </dialog>
+</div>
+`;
+
+exports[`<Modal /> when data is fetching should render Loader 1`] = `
+<div>
+  <dialog
+    class="dialog"
+    role="dialog"
+  >
+    <div
+      class="loader"
+    >
+      <svg>
+        <use
+          href="function SvgIcons(props) {
+  return React.createElement(
+    'svg', 
+    Object.assign({}, props, {'data-file-name': SvgIcons.name})
+  );
+}#icon-cw"
+        />
+      </svg>
+    </div>
+  </dialog>
+</div>
+`;

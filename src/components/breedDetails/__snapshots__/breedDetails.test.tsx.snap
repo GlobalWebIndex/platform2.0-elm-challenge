@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BreedDetails /> should render breed images 1`] = `
+<div>
+  <div
+    class="images"
+  >
+    <a
+      href="/cats/1"
+    >
+      <img
+        alt="Breed"
+        src="https://example.com/image1.jpg"
+      />
+    </a>
+    <a
+      href="/cats/2"
+    >
+      <img
+        alt="Breed"
+        src="https://example.com/image2.jpg"
+      />
+    </a>
+  </div>
+</div>
+`;

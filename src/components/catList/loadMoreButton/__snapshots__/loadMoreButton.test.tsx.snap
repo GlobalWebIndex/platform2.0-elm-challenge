@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadMoreButton /> should render the button 1`] = `
+<div>
+  <button
+    class="loadMore"
+  >
+    Load more
+  </button>
+</div>
+`;

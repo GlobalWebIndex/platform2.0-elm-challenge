@@ -1,0 +1,1 @@
+export {useFetchCats} from './useFetchCats';

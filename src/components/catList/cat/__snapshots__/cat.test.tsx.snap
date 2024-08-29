@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cat /> should render the cat image 1`] = `
+<div>
+  <img
+    alt="Cat"
+    class="image"
+    src="https://example.com/cat.jpg"
+  />
+</div>
+`;
