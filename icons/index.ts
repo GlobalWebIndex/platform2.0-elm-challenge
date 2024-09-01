@@ -1,0 +1,8 @@
+export { Bookmark } from './bookmark'
+export { CommentBubble } from './comment-bubble'
+export { Compass } from './compass'
+export { Cross } from './cross'
+export { Heart } from './heart'
+export { HeartFilled } from './heart-filled'
+export { Home } from './home'
+export { VerticalDots } from './vertical-dots'

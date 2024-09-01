@@ -1,19 +1,35 @@
-# GlobalWebIndex Engineering Challenge
-## Exercise: CatLover
-Create an Elm or React application for cat lovers which is going to build upon thecatapi.com and will have 3 views. 
-The **first** view displays a list of 10 random cat images and a button to load more. Clicking on any of those images opens a modal view with the image and the information about the cat’s breed if available. This would be a link to the second view below - the breed detail. The modal should also contain a form to mark the image as your favourite (a part of the third view as well). Make sure you can copy-paste the URL of the modal and send it to your friends - they should see the same image as you can see. 
+# Catgram
 
-The **second** view displays a list of cat breeds. Each breed opens a modal again with a list of cat images of that breed. Each of those images must be a link to the image detail from the previous point. 
+Instagram for cats
 
-The **third** view allows you do the following things:
-* Display your favourite cats 
-* Remove an image from your favourites (use any UX option you like)
+## Prerequisites
 
-You can find the API documentation here: https://docs.thecatapi.com/ 
-We give you a lot of freedom in technologies and ways of doing things. We only insist on you using React.js or the Elm language. Get creative as much as you want, we WILL appreciate it. You will not be evaluated based on how well you follow these instructions, but based on how sensible your solution will be. In case you are not able to implement something you would normally implement for time reasons, make it clear with a comment. 
+1. Install [Node](https://nodejs.org)
 
-## Submission
+2. Install [pnpm](https://pnpm.io/installation)
 
-Just a make a PR to the current repo!
-Good luck, potential colleague! 
+## Setting Up Your API Key
 
+To use the cat API in this project, you need to set up an API key. Follow these steps:
+
+1. Get a Cat API Key: Visit [https://thecatapi.com](https://thecatapi.com)
+
+2. In the root directory of this project, create a new file named `.env.local`. This file will store your API key.
+
+3. Add Your API Key: Add the following line in the `.env.local` file, replacing `YOUR_API_KEY_HERE` with your actual API key:
+
+```
+API_KEY=<YOUR_API_KEY_HERE>
+```
+
+For reference, you can look at the `.env.example` file in the project root. It shows the expected format for the `.env.local` file.
+
+## Getting Started
+
+Run the development server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
