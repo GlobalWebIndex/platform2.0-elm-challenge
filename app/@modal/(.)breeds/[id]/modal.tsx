@@ -2,6 +2,7 @@
 
 import { BreedView } from '@/components/breed'
 import { Cross } from '@/icons'
+import { Cat } from '@/lib/types'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useRouter } from 'next/navigation'
 
@@ -9,8 +10,8 @@ export default function Modal({
   cats,
   breedCat
 }: {
-  cats: any
-  breedCat: any
+  cats: Cat[]
+  breedCat: Cat
 }) {
   const router = useRouter()
 
